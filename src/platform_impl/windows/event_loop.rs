@@ -1171,7 +1171,7 @@ unsafe fn public_window_callback_inner<T: 'static>(
 
                 let new_rect = if window_pos.flags & NOMOVE_OR_NOSIZE != 0 {
                     let cur_rect = util::WindowArea::Outer.get_rect(window)
-                        .expect("Unexpected GetWindowRect failure; please report this error to https://github.com/rust-windowing/winit");
+                        .expect("Unexpected GetWindowRect failure; please report this error to rust-windowing/winit");
 
                     match window_pos.flags & NOMOVE_OR_NOSIZE {
                         NOMOVE_OR_NOSIZE => None,
